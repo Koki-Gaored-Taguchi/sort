@@ -4,6 +4,7 @@
 #define N 2999
 
 int A[N];
+int B[N];
 
 // *p と *q の値を入れ替える関数
 void swap(int *p, int *q){
@@ -44,4 +45,17 @@ int main(){
     if(quick_select(A, N, i) != i) printf("ERROR %d %d\n", i, quick_select(A, N, i));
 //    printf("%d th element is %d\n", i, quick_select(A, N, i));
   }
+    for(i=0;i<=N/5;i++){
+        if(5*i+5<=N){
+            B[i]=quick_select(A+5*i,5,3);
+            printf("%d\n",B[i]);
+        }
+        else{
+            B[i]=quick_select(A+5*i,N-5*i,(N/2)+1);
+            printf("%d\n",B[i]);
+        }
+        
+    }
+    int m=quick_select(B,N/5,((N/5)/2)+1);
+    printf("%d\n",m);
 }
