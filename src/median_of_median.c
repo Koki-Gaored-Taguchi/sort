@@ -48,14 +48,15 @@ int main(){
     for(i=0;i<=N/5;i++){
         if(5*i+5<=N){
             B[i]=quick_select(A+5*i,5,3);
-            printf("%d\n",B[i]);
+            
         }
         else{
-            B[i]=quick_select(A+5*i,N-5*i,(N/2)+1);
-            printf("%d\n",B[i]);
+            B[i]=quick_select(A+5*i,N-5*i,((N-5*i)/2)+1);
         }
-        
+
     }
+
+
     int m=quick_select(B,N/5,((N/5)/2)+1);
     printf("%d\n",m);
 }
