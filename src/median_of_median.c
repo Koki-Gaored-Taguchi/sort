@@ -45,7 +45,7 @@ int main(){
     if(quick_select(A, N, i) != i) printf("ERROR %d %d\n", i, quick_select(A, N, i));
 //    printf("%d th element is %d\n", i, quick_select(A, N, i));
   }
-    for(i=0;i<=N/5;i++){
+    for(i=0;i<=(N/5)+1;i++){
         if(5*i+5<=N){
             B[i]=quick_select(A+5*i,5,3);
             
@@ -57,6 +57,6 @@ int main(){
     }
 
 
-    int m=quick_select(B,N/5,((N/5)/2)+1);
+    int m=quick_select(B,(N/5)+1,(((N/5)+1)/2)+1);
     printf("%d\n",m);
 }
